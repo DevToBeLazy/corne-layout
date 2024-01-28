@@ -36,16 +36,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define LT_ESC LT(LAYER_NAV, KC_ESC)
 // Left-hand home row mods
-#define HOME_S LCTL_T(KC_S)
+#define HOME_S LGUI_T(KC_S)
 #define HOME_D LALT_T(KC_D)
-#define HOME_F LGUI_T(KC_F)
+#define HOME_F LCTL_T(KC_F)
 
 // Right-hand home row mods
-#define HOME_J RGUI_T(KC_J)
+#define HOME_J RCTL_T(KC_J)
 #define HOME_K LALT_T(KC_K)
-#define HOME_L RCTL_T(KC_L)
+#define HOME_L RGUI_T(KC_L)
 
-#define LANG_C LCTL_T(KC_CAPS)
+#define LANG_C RSFT_T(KC_CAPS)
 #define TAB_C C(KC_TAB)
 #define OBS LSA_T(KC_A)
 #define ALFRED G(KC_SPC)
@@ -71,9 +71,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
        LT_ESC,    OBS,    KC_S,   HOME_D,  HOME_F,    KC_G,                         KC_H,  HOME_J,  HOME_K,    KC_L, KC_SCLN, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   MACRO,
+      KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   MACRO,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          NUM,     KC_LSFT,  KC_SPC,     KC_ENT,     SYM,  LANG_C
+                                          KC_LGUI,     NUM,  KC_SPC,     KC_ENT,     SYM,  LANG_C
                                       //`--------------------------'  `--------------------------'
 
   ),
@@ -83,9 +83,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______,     OBS, XXXXXXX, KC_LALT, KC_LGUI, XXXXXXX,                      KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT,  KC_F11, KC_LPAD,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL,    UNDO,     CUT,    COPY,   PASTE, XXXXXXX,                      XXXXXXX,   MUSIC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+      KC_LSFT,    UNDO,     CUT,    COPY,   PASTE, XXXXXXX,                      FILES,   MUSIC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          FILES,  KC_LSFT,  ALFRED,      KC_ENT, _______, _______
+                                          KC_LGUI,  _______,  ALFRED,      KC_ENT, _______, _______
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -95,9 +95,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC_PAST,   KC_P4,   KC_P5, KC_P6, KC_PPLS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      KC_LCTL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC_NUBS,   KC_P1,   KC_P2, KC_P3, KC_PEQL, XXXXXXX,
+      KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                        KC_NUBS,   KC_P1,   KC_P2, KC_P3, KC_PEQL, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, KC_LSFT,  KC_SPC,      KC_ENT, KC_P0, KC_PDOT
+                                          KC_LGUI, _______,  KC_SPC,      KC_ENT, KC_P0, KC_PDOT
                                       //`--------------------------'  `--------------------------'
   ),
     [LAYER_SYM] = LAYOUT_split_3x6_3(
@@ -108,7 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          FN,      KC_LGUI,  KC_SPC,     KC_ENT, _______, KC_RALT
+                                          KC_LGUI,      FN,  KC_SPC,     KC_ENT, _______, KC_RALT
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, KC_LGUI,  KC_SPC,     KC_ENT, _______, KC_RALT
+                                          KC_LGUI, _______,  KC_SPC,     KC_ENT, _______, KC_RALT
                                       //`--------------------------'  `--------------------------'
   ),
    [LAYER_MACRO] = LAYOUT_split_3x6_3(
@@ -131,7 +131,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, KC_VOLD, KC_BRID,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                           CONFIG, KC_LGUI,  KC_SPC,     KC_ENT, XXXXXXX, KC_RALT
+                                           KC_LGUI, CONFIG,  KC_SPC,     KC_ENT, XXXXXXX, KC_RALT
                                       //`--------------------------'  `--------------------------'
   ),
     [LAYER_CONFIG] = LAYOUT_split_3x6_3(

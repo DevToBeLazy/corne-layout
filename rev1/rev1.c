@@ -8,6 +8,10 @@
 #    define CAPSLOCK_INDICATOR_BRIGHTNESS_INC 76
 #endif
 
+#ifndef RGB_MATRIX_MAXIMUM_BRIGHTNESS
+#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 100
+#endif
+
 #ifdef RGB_MATRIX_ENABLE
 static HSV _get_hsv_for_layer_index(uint8_t layer) {
     switch (layer) {
@@ -38,7 +42,7 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
         for (int i = led_min; i <= led_max; i++) {
             if (HAS_FLAGS(g_led_config.flags[i], LED_FLAG_MODIFIER)) {
                 // set modifier-flagged LEDs to a pure a configured interval brighter than the current brightness, clamped to 255 (ie. uint8_t max value).
-                rgb_matrix_set_color(i, MIN(rgb_matrix_get_val() + CAPSLOCK_INDICATOR_BRIGHTNESS_INC, 120), 0, 0);
+                rgb_matrix_set_color(i, MIN(rgb_matrix_get_val() + CAPSLOCK_INDICATOR_BRIGHTNESS_INC, RGB_MATRIX_MAXIMUM_BRIGHTNESS), 0, 0);
             }
         }
     }
@@ -49,7 +53,7 @@ bool rgb_matrix_indicators_advanced_kb(uint8_t led_min, uint8_t led_max) {
         HSV hsv = _get_hsv_for_layer_index(layer);
 
         // Set brightness to the configured interval brighter than current brightness, clamped to 255 (ie. uint8_t max value). This compensates for the dimmer appearance of the underglow LEDs.
-        hsv.v         = MIN(rgb_matrix_get_val() + LAYER_INDICATOR_BRIGHTNESS_INC, 120);
+        hsv.v         = MIN(rgb_matrix_get_val() + LAYER_INDICATOR_BRIGHTNESS_INC, RGB_MATRIX_MAXIMUM_BRIGHTNESS);
         const RGB rgb = hsv_to_rgb(hsv);
 
         for (int i = led_min; i < led_max; i++) {
