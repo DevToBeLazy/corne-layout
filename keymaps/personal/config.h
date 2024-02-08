@@ -39,7 +39,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
 #define AUTO_MOUSE_DEFAULT_LAYER 7
 #define CIRQUE_PINNACLE_TAP_ENABLE
-#define TAPPING_TERM 125
+#define TAPPING_TERM 100
 // #define AUTO_MOUSE_TIME 250
 //  #define CIRQUE_PINNACLE_TOUCH_DEBOUNCE 70
 #define CIRQUE_PINNACLE_TAPPING_TERM 70
