@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSE_EXTENDED_REPORT
 
 // Limits the frequency that the sensor is polled for motion.
-#define POINTING_DEVICE_TASK_THROTTLE_MS 1
+#define POINTING_DEVICE_TASK_THROTTLE_MS 10
 
 // Adjust trackpad rotation.
 
