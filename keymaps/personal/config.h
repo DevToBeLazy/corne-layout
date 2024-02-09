@@ -28,21 +28,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSE_EXTENDED_REPORT
 
 // Limits the frequency that the sensor is polled for motion.
-// #define POINTING_DEVICE_TASK_THROTTLE_MS 10
+#define POINTING_DEVICE_TASK_THROTTLE_MS 1
 
 // Adjust trackpad rotation.
 
-// Configure for the Cirque model used on the Dilemma.
 #define CIRQUE_PINNACLE_DIAMETER_MM 40
 #define CIRQUE_PINNACLE_CURVED_OVERLAY
 #define POINTING_DEVICE_GESTURES_SCROLL_ENABLE // Circular scroll.ds
 #define POINTING_DEVICE_GESTURES_CURSOR_GLIDE_ENABLE
 #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
+#define AUTO_MOUSE_DEFAULT_LAYER 6
 #define CIRQUE_PINNACLE_TAP_ENABLE
 #define TAPPING_TERM 125
-#define AUTO_MOUSE_TIME 300
-#define AUTO_MOUSE_DELAY 60
-#define CIRQUE_PINNACLE_TOUCH_DEBOUNCE 70
+// #define AUTO_MOUSE_TIME 250
+//  #define CIRQUE_PINNACLE_TOUCH_DEBOUNCE 70
+#define CIRQUE_PINNACLE_TAPPING_TERM 70
 
 // #define USE_MATRIX_I2C
 
