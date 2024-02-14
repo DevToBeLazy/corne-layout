@@ -28,7 +28,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSE_EXTENDED_REPORT
 
 // Limits the frequency that the sensor is polled for motion.
-#define POINTING_DEVICE_TASK_THROTTLE_MS 10
+#define POINTING_DEVICE_TASK_THROTTLE_MS 1
 
 // Adjust trackpad rotation.
 
@@ -39,9 +39,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define POINTING_DEVICE_AUTO_MOUSE_ENABLE
 #define AUTO_MOUSE_DEFAULT_LAYER 6
 #define CIRQUE_PINNACLE_TAP_ENABLE
-#define TAPPING_TERM 125
-// #define AUTO_MOUSE_TIME 250
-//  #define CIRQUE_PINNACLE_TOUCH_DEBOUNCE 70
+#define TAPPING_TERM 110
+// #define AUTO_MOUSE_TIME 350
+#define AUTO_MOUSE_DEBOUNCE 60
+// #define CIRQUE_PINNACLE_TOUCH_DEBOUNCE 70
 #define CIRQUE_PINNACLE_TAPPING_TERM 70
 
 // #define USE_MATRIX_I2C
@@ -59,7 +60,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #    define RGB_DISABLE_WHEN_USB_SUSPENDED                              // turn off effects when suspended
 #    define RGB_MATRIX_LED_PROCESS_LIMIT (RGB_MATRIX_LED_COUNT + 4) / 5 // limits the number of LEDs to process in an animation per task run (increases keyboard responsiveness)
 #    define RGB_MATRIX_LED_FLUSH_LIMIT 16                               // limits in milliseconds how frequently an animation will update the LEDs. 16 (16ms) is equivalent to limiting to 60fps (increases keyboard responsiveness)
-#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 100                           // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
+#    define RGB_MATRIX_MAXIMUM_BRIGHTNESS 80                            // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
 #    define RGB_MATRIX_HUE_STEP 8
 #    define RGB_MATRIX_SAT_STEP 8
 #    define RGB_MATRIX_VAL_STEP 8
